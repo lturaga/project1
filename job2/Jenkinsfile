@@ -8,7 +8,7 @@ node{
 	stage('execute playbook')
 	{
 		sh 'cd ./job2'
-		sg 'ansible-playbook -i hosts.yaml ansible-playbook.yaml'
+		sh 'ansible-playbook -i hosts.yaml ansible-playbook.yaml'
 		
 	
 	}
