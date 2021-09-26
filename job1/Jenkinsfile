@@ -6,7 +6,7 @@ node('slave'){
 	
 	}
 	stage('install puppet agent'){
-		sh 'sudo curl -k -o https://apt.puppet.com/puppet6-release-bionic.deb'
+		sh 'sudo curl -k -O https://apt.puppet.com/puppet6-release-bionic.deb'
 		sh 'sudo apt install -y ./puppet6-release-bionic.deb && sudo apt update && sudo apt install -y puppet-agent'
 	}
 
