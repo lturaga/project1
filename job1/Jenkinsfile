@@ -7,7 +7,7 @@ node{
 	}
 	stage('install puppet agent'){
 		sudo apt install -y wget
-		curl -O https://apt.puppet.com/puppet6-release-bionic.deb
+		curl -k -o https://apt.puppet.com/puppet6-release-bionic.deb
 		sudo apt install ./puppet6-release-bionic.deb
 		sudo apt update
 		sudo apt install  puppet-agent
