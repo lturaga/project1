@@ -8,6 +8,7 @@ node{
 	stage('execute playbook')
 	{
 		sh 'cd ./job2'
+		sh 'pwd && ls'
 		sh 'ansible-playbook -i hosts.yaml ansible-playbook.yaml'
 		
 	
