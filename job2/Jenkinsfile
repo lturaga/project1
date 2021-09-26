@@ -8,6 +8,6 @@ node{
 	stage('execute playbook')
 	{
 		sh 'export ANSIBLE_HOST_KEY_CHECKING=False'
-		sh 'ansible-playbook -i ${WORKSPACE}/job2/hosts.yaml ${WORKSPACE}/job2/docker-playbook.yaml'
+		sh 'echo ${ANSIBLE_HOST_KEY_CHECKING} && ansible-playbook -i ${WORKSPACE}/job2/hosts.yaml ${WORKSPACE}/job2/docker-playbook.yaml'
 	}
 }
