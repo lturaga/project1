@@ -1,13 +1,13 @@
 node('slave'){
 
 	stage('checkout code'){
-		
+
 		checkout changelog: false, poll: false, scm: [$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'git', url: 'https://github.com/lturaga/project1.git']]]
 	
 	}
 	stage('install puppet agent'){
-		sh 'sudo apt install -y wget && curl -k -o https://apt.puppet.com/puppet6-release-bionic.deb'
-		sh 'sudo apt install ./puppet6-release-bionic.deb && sudo apt update && sudo apt install  puppet-agent'
+		sh 'sudo curl -k -o https://apt.puppet.com/puppet6-release-bionic.deb'
+		sh 'sudo apt install -y ./puppet6-release-bionic.deb && sudo apt update && sudo apt install -y puppet-agent'
 	}
 
 }
