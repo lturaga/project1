@@ -1,0 +1,11 @@
+---
+- name: install docker
+  hosts: test
+  become: yes
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+  tasks:
+  - name: install docker
+    apt:
+      package: docker.io
+      state: present    
