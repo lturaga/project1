@@ -9,9 +9,9 @@ node('slave')
     {
         dir('job3') {
             
-          //git changelog: false, poll: false, url: 'https://github.com/edureka-devops/projCert.git'
-          //sh 'sudo docker build -t lturaga/webapp .'
-          //sh 'sudo docker run -it -d --name webapp -p 80:80 lturaga/webapp'
+          
+          sh 'sudo docker build -t lturaga/webapp .'
+          sh 'sudo docker run -it -d --name webapp -p 80:80 lturaga/webapp'
           //sh 'num=`sudo docker container ps | grep webapp | wc -l`'
           
        }  
