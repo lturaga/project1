@@ -7,7 +7,7 @@ node{
 	
 	stage('execute playbook')
 	{
-		sh 'echo ${WORKSPACE}'
-		sh 'ansible-playbook -i hosts.yaml docker-playbook.yaml'
+		
+		sh 'ansible-playbook -i ${WORKSPACE}/job2/hosts.yaml ${WORKSPACE}/job2/docker-playbook.yaml'
 	}
 }
